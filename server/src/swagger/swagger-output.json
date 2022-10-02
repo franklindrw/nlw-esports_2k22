@@ -1,0 +1,148 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "NLW E-Sports 2k22",
+    "description": "Api em Node desenvolvida no evento nlw, api REST em arquitetura MVC"
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "Games",
+      "description": "Endpoints de games"
+    },
+    {
+      "name": "Anúncios",
+      "description": "Endpoints de Anúncios"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/ads": {
+      "get": {
+        "tags": [
+          "Anúncios"
+        ],
+        "description": "Endpoint para obter todos os anúncios.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Anúncios"
+        ],
+        "description": "Endpoint para adicionar um novo anúncio.",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        }
+      }
+    },
+    "/games/{id}/ads": {
+      "get": {
+        "tags": [
+          "Anúncios"
+        ],
+        "description": "Endpoint para listar todos os anúncios pelo id do game.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "Id do anúncio."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/ads/{id}/ads": {
+      "get": {
+        "tags": [
+          "Anúncios"
+        ],
+        "description": "Endpoint para busca o discord pelo Id do anúncio.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "Id do anúncio."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/games": {
+      "get": {
+        "tags": [
+          "Games"
+        ],
+        "description": "Endpoint para obter todos os games.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/games/{id}": {
+      "get": {
+        "tags": [
+          "Games"
+        ],
+        "description": "Endpoint para buscar o game pelo id.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "ID do game."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  }
+}

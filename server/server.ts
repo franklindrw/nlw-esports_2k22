@@ -1,4 +1,5 @@
 import app from './src/app';
+import swagger from './src/swagger';
 
 const port = process.env.PORT || 3000;
 
