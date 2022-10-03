@@ -12,7 +12,7 @@ class GameController {
     static listarGamePorId = async(req: any, res: any) => {
         // #swagger.tags = ['Games']
         // #swagger.description = 'Endpoint para buscar o game pelo id.'
-        // #swagger.parameters['id'] = { description: 'ID do game.' }
+        // #swagger.parameters['id'] = { description: 'ID do game.', required: true }
 
         const id = req.params.id;
         const data = await buscaGamePorId(id);

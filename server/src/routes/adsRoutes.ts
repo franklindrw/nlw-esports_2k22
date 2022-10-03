@@ -5,8 +5,8 @@ const router = express.Router();
 
 router
     .get('/ads', AdController.listarAds)
-    .post('/ads', AdController.adicionarAds)
+    .post('/games/:id/ads', AdController.adicionarAds)
     .get('/games/:id/ads', AdController.listarAdsPorGame)
-    .get('/ads/:id/ads', AdController.buscarDiscordPeloAdsId)
+    .get('/ads/:id/discord', AdController.buscarDiscordPeloAdsId)
 
 export default router;

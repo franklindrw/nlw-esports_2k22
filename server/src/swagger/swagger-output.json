@@ -27,17 +27,6 @@
     "application/json"
   ],
   "paths": {
-    "/": {
-      "get": {
-        "description": "",
-        "parameters": [],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/ads": {
       "get": {
         "tags": [
@@ -50,21 +39,31 @@
             "description": "OK"
           }
         }
-      },
+      }
+    },
+    "/games/{id}/ads": {
       "post": {
         "tags": [
           "Anúncios"
         ],
         "description": "Endpoint para adicionar um novo anúncio.",
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
         "responses": {
+          "200": {
+            "description": "OK"
+          },
           "201": {
             "description": "Created"
           }
         }
-      }
-    },
-    "/games/{id}/ads": {
+      },
       "get": {
         "tags": [
           "Anúncios"
@@ -86,7 +85,7 @@
         }
       }
     },
-    "/ads/{id}/ads": {
+    "/ads/{id}/discord": {
       "get": {
         "tags": [
           "Anúncios"
@@ -141,6 +140,49 @@
           "200": {
             "description": "OK"
           }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "addAds": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "example": "nick name example"
+        },
+        "yearsPlaying": {
+          "type": "number",
+          "example": 1
+        },
+        "discord": {
+          "type": "string",
+          "example": "discord#id"
+        },
+        "weekDays": {
+          "type": "array",
+          "example": [
+            0,
+            2,
+            5,
+            6
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "hourStart": {
+          "type": "number",
+          "example": 1080
+        },
+        "hourEnd": {
+          "type": "number",
+          "example": 1320
+        },
+        "useVoiceChannel": {
+          "type": "boolean",
+          "example": true
         }
       }
     }
