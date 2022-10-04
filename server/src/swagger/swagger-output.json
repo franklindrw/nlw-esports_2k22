@@ -3,7 +3,7 @@
   "info": {
     "version": "1.0.0",
     "title": "NLW E-Sports 2k22",
-    "description": "Api em Node desenvolvida no evento nlw, api REST em arquitetura MVC"
+    "description": "Api em Node desenvolvida no evento nlw e-sports 2022, api REST em arquitetura MVC"
   },
   "host": "localhost:3000",
   "basePath": "/",
@@ -158,27 +158,19 @@
         },
         "discord": {
           "type": "string",
-          "example": "discord#id"
+          "example": "discord#9999"
         },
         "weekDays": {
-          "type": "array",
-          "example": [
-            0,
-            2,
-            5,
-            6
-          ],
-          "items": {
-            "type": "number"
-          }
+          "type": "string",
+          "example": "0, 1, 2, 3"
         },
         "hourStart": {
-          "type": "number",
-          "example": 1080
+          "type": "string",
+          "example": "00:00"
         },
         "hourEnd": {
-          "type": "number",
-          "example": 1320
+          "type": "string",
+          "example": "23:59"
         },
         "useVoiceChannel": {
           "type": "boolean",

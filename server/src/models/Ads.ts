@@ -1,5 +1,6 @@
 import { PrismaClient } from "@prisma/client";
 import convertHoursToMinutes from "../utils/convert-hours-to-minutes";
+import convertMinutesToHours from '../utils/convert-minutes-to-hours';
 
 interface AdsProps{
     name: string,
@@ -38,7 +39,9 @@ export async function buscaAdPorId(gameId: string){
         .map(ad => {
             return {
                 ...ad,
-                weekDays: ad.weekDays.split(',')
+                weekDays: ad.weekDays.split(','),
+                hourStart: convertMinutesToHours(ad.hourStart),
+                hourEnd: convertMinutesToHours(ad.hourEnd)
             }});
 
     return dataFormatada;

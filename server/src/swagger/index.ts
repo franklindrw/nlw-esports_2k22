@@ -4,7 +4,7 @@ const doc = {
   info: {
     version: "1.0.0",
     title: 'NLW E-Sports 2k22',
-    description: 'Api em Node desenvolvida no evento nlw, api REST em arquitetura MVC',
+    description: 'Api em Node desenvolvida no evento nlw e-sports 2022, api REST em arquitetura MVC',
   },
   host: 'localhost:3000',
   basePath: "/",
@@ -25,9 +25,9 @@ const doc = {
     addAds: {
       name: "nick name example",
       yearsPlaying: 1,
-      discord: "discord#id",
-      weekDays: "0, 2, 5, 6",
-      hourStart: "17:00",
+      discord: "discord#9999",
+      weekDays: "0, 1, 2, 3",
+      hourStart: "00:00",
       hourEnd: "23:59",
       useVoiceChannel: true
     }
