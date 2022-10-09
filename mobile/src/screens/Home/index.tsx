@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { View, Image, FlatList } from "react-native";
 import { styles } from "./style";
 
@@ -6,8 +7,15 @@ import { GAMES } from "../../utils/games";
 
 import { Heading } from "../../components/Heading";
 import { GameCard } from "../../components/GameCard";
+import api from "../../config/apiConfig";
 
 export function Home() {
+    useEffect(() => {
+        api.get("games").then((games) => {
+            console.log(games.data);
+        });
+    }, []);
+
     return (
         <View style={styles.container}>
             <Image source={logoImg} style={styles.logo} />
