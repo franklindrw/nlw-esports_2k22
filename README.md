@@ -34,7 +34,6 @@
   * [Web Server (API)](#api)
   * [Aplicação Web](#web)
   * [Aplicação Mobile](#mobile)
-* [Como usar](%EF%B8%8F-como-usar)
 * [Autor](#-autor)
 * [Licença](#-licença)
 
@@ -191,6 +190,14 @@ com tudo pronto você poderá seguir com os passos abaixo:
       node ./dist/server.js
     ```
     
+<div align='end'>
+  
+  [voltar para o índice](#-índice)
+  
+</div>
+
+<br />
+    
 ### Web
 
 1. Abra o cmd e navegue através dele até a pasta server: nlw-esports_2k22/web/
@@ -214,6 +221,14 @@ com tudo pronto você poderá seguir com os passos abaixo:
     ```
       node ./dist
     ```
+
+<div align='end'>
+  
+  [voltar para o índice](#-índice)
+  
+</div>
+
+<br />
 
 ### Mobile
 1. Abra o cmd e navegue através dele até a pasta server: nlw-esports_2k22/mobile/
@@ -242,3 +257,22 @@ com tudo pronto você poderá seguir com os passos abaixo:
 
 <br />
 
+### 🖊 Autor
+
+<a href="https://github.com/franklindrw">
+<img style="border-radius: 50%; width: 100px" src="https://github.com/franklindrw.png" alt="Foto do Autor"/>
+<br />
+<sub><b>Franklin Campos </b></sub>
+</a>
+</br>
+<p>Feito por <strong>Franklin Campos</strong> 👋🏻 </br>
+Entre em contato!</p>
+<div>
+<a href="https://www.linkedin.com/in/franklindrw" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
+<a href="mailto:franklindrw@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
+<a href="https://www.instagram.com/franklindrw" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
+</div>
+
+## 📋 Licença
+<p> Copyright 2022 © Franklin Campos </br>
+This project is MIT licensed.</p>
