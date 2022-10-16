@@ -31,7 +31,9 @@
   * [Linguagens Usadas](#-construído-com)
 * [Instalação](#-instalação)
   * [Requisitos](#requisitos)
-  * [Instalar a aplicação Web](#instalar-a-aplicação-web)
+  * [Web Server (API)](#api)
+  * [Aplicação Web](#web)
+  * [Aplicação Mobile](#mobile)
 * [Como usar](%EF%B8%8F-como-usar)
 * [Autor](#-autor)
 * [Licença](#-licença)
@@ -151,6 +153,92 @@ Já os Models segue a mesma idéia dos controllers, temos um arquivo principal q
 
 ### Requisitos
 
-Para instalar as aplicações web e server API é necessário ter instalado Node.js, caso não tenha pode baixar <a href="https://nodejs.org/pt-br/">Clicando aqui!</a>
+Após clonar o projeto precisará instalar as aplicações web e server API é necessário ter instalado Node.js, caso não tenha pode baixar <a href="https://nodejs.org/pt-br/">Clicando aqui!</a>
 
+E para a o aplicativo é necessário que tenha instalado o Expo no smartphone o [Expo Go](https://expo.dev/client)
+
+ou também é possível compilar a aplicação para um arquivo .apk(android) e/ou .ipa(ios) usando o expo através do passo-a-passo [aqui!](https://docs.expo.dev/archive/classic-updates/building-standalone-apps/)
+
+com tudo pronto você poderá seguir com os passos abaixo:
+
+### API
+
+1. Abra o cmd e navegue através dele até a pasta server: nlw-esports_2k22/server/
+
+    dentro da pasta use o comando abaixo:
+    ```
+      npm i
+    ```
+    e aguarde instalar todas as bibliotecas necessárias para rodar o projeto.
+
+2. Com os bibliotecas instaladas use o comando abaixo para gerar o arquivo do swagger:
+    ```
+      npm run auto-gen
+    ```
+
+3. Após gerar os arquivos você pode testar a aplicação na máquina usando o comando:
+    ```
+      npm run dev
+    ```
+    em seguida irá gerar no cmd o endereço para acessar fazer as requisições ou acessar o swagger com http://localhost:3000/docs
+
+4. Caso queira instalar em um servidor de produção pode compilar a aplicação usando o comando:
+    ```
+      npm run build
+    ```
+    em seguida copie a pasta dist gerada dentro da aplicação para o servidor desejado, navegue até dentro da pasta onde está a pasta build, e com Node instalado e use o comando abaixo para rodar o build:
+    ```
+      node ./dist/server.js
+    ```
+    
+### Web
+
+1. Abra o cmd e navegue através dele até a pasta server: nlw-esports_2k22/web/
+    dentro da pasta use o comando abaixo:
+    ```
+      npm i
+    ```
+    e aguarde instalar todas as bibliotecas necessárias para rodar o projeto.
+    
+2. Após instalar as bibliotecas você pode testar a aplicação na máquina usando o comando:
+    ```
+      npm run dev
+    ```
+    em seguida irá gerar no cmd o endereço para acessar a aplicação web.
+
+3. Caso queira instalar em um servidor de produção pode compilar a aplicação usando o comando:
+    ```
+      npm run build
+    ```
+    em seguida copie a pasta dist gerada dentro da aplicação para o servidor desejado, navegue até dentro da pasta onde está a pasta build, e com Node instalado e use o comando abaixo para rodar o build:
+    ```
+      node ./dist
+    ```
+
+### Mobile
+1. Abra o cmd e navegue através dele até a pasta server: nlw-esports_2k22/mobile/
+    dentro da pasta use o comando abaixo:
+    ```
+      npm i
+    ```
+    e aguarde instalar todas as bibliotecas necessárias para rodar o projeto.
+    
+ 2. Após instalar as bibliotecas você pode testar a aplicação na máquina usando o comando:
+    ```
+      expo start
+    ```
+    em seguida irá gerar no cmd um QRCode para scannear usando o aplicativo Expo Go instalado no celular ou caso tenha algum simulador terá os comandos abaixo do QRCode para iniciar o simulador que deseja como também restartar, iniciar e parar o aplicativo.
+    
+3. Caso queira instalar uma compilação no celular ou subir na loja de aplicativos de preferência siga os passos nesse tutorial [aqui!](https://docs.expo.dev/archive/classic-updates/building-standalone-apps/)
+    
+    após gerar a compilação, transfira para o celular e instale, ou faça upload na sua loja de preferência.
+<br />
+
+<div align='end'>
+  
+  [voltar para o índice](#-índice)
+  
+</div>
+
+<br />
 
